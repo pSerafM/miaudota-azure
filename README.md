@@ -43,7 +43,7 @@ https://github.com/pSerafM/miaudota-azure
 
 ### Azure Functions
 
-https://miaudota-api-midup-c2dqhcemane5h4eg.brazilsouth-01.azurewebsites.net
+[https://miaudota-api-midup-c2dqhcemane5h4eg.brazilsouth-01.azurewebsites.net](https://miaudota-api-midup-c2dqhcemane5h4eg.brazilsouth-01.azurewebsites.net/api/pets)
 
 ## Inteligência Artificial Generativa
 
