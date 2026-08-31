@@ -1,8 +1,19 @@
 const listaPets = document.getElementById("lista-pets");
 
-function carregarPets() {
+async function carregarPets() {
 
-    const pets = PetService.obterPets();
+    let pets;
+
+    try {
+        pets = await PetService.obterPetsAzure();
+
+        PetService.salvarPets(pets);
+
+    } catch (erro) {
+        console.error("Erro ao carregar pets da Azure:", erro);
+
+        pets = PetService.obterPets();
+    }
 
     listaPets.innerHTML = "";
 

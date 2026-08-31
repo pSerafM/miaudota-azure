@@ -1,5 +1,17 @@
 const PetService = {
 
+    async obterPetsAzure() {
+        const resposta = await fetch(
+            "https://miaudota-api-midup-c2dqhcemane5h4eg.brazilsouth-01.azurewebsites.net/api/pets"
+        );
+
+        if (!resposta.ok) {
+            throw new Error("Erro ao consultar a Azure Function");
+        }
+
+        return await resposta.json();
+    },
+
     obterPets() {
         const pets = localStorage.getItem("pets");
 
