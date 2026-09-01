@@ -1,5 +1,5 @@
 // URL local para testes. Ao publicar, troque para a URL da nuvem.
-const response = await fetch('/api/pets');
+const API_URL = '/api/pets';
 
 async function listarPets() {
     const response = await fetch(API_URL);
