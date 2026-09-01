@@ -1,5 +1,5 @@
 // URL local para testes. Ao publicar, troque para a URL da nuvem.
-const API_URL = '/api/pets';
+const API_URL = 'https://miaudota-api-midup-c2dqhcemane5h4eg.brazilsouth-01.azurewebsites.net/api/pets';
 
 async function listarPets() {
     const response = await fetch(API_URL);
