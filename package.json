@@ -8,8 +8,8 @@
     "build": "echo Build completed"
   },
   "dependencies": {
-    "@azure/functions": "^4.0.0"
+    "@azure/functions": "^4.0.0",
+    "mongodb": "^7.6.0"
   },
-  "devDependencies": {},
   "main": "src/{index.js,functions/*.js}"
 }
