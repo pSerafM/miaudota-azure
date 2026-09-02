@@ -61,15 +61,24 @@ main {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .botao {
-    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     border: none;
     padding: 10px 10px;
     color: rgb(241, 237, 237);
     cursor: pointer;
+    font-family: inherit;
     font-size: 14px;
+    line-height: 1.2;
     border-radius: 16px;
     backdrop-filter: blur(8.8px);
     text-decoration: none;
@@ -79,6 +88,11 @@ main {
 .botao:hover {
     transform: translateY(-2px) scale(1.02);
 
+}
+
+.botao:focus-visible {
+    outline: 2px solid #c4ff3c;
+    outline-offset: 3px;
 }
 .excluir {
     background: linear-gradient(45deg,rgba(179, 17, 17, 0.61) 0%, rgba(179, 95, 17, 0.212) 100%);

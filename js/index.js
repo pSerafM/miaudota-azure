@@ -25,8 +25,10 @@ async function carregarPets() {
                 <br>
                 <p id="descricao"> "${pet.descricao}" </p>
                 <br>
-                <button onclick="editar('${pet._id}', '${pet.nome}')" class="botao editar">Editar Nome</button>
-                <button onclick="excluir('${pet._id}')" class="botao excluir">Excluir</button>
+                <div class="acoes">
+                    <button onclick="editar('${pet._id}', '${pet.nome}')" class="botao editar">Editar Nome</button>
+                    <button onclick="excluir('${pet._id}')" class="botao excluir">Excluir</button>
+                </div>
             `;
 
             container.appendChild(card);
