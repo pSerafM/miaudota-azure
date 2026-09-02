@@ -1,6 +1,6 @@
 # MiAuDota
 
-Projeto desenvolvido para a atividade PJBL, com o objetivo de criar um frontend web integrado a uma Azure Function e utilizando dados mockados.
+Projeto desenvolvido para a atividade PJBL, com o objetivo de criar um frontend web integrado a uma Azure Function e ao MongoDB Atlas.
 
 ## Tecnologias utilizadas
 
@@ -10,7 +10,7 @@ Projeto desenvolvido para a atividade PJBL, com o objetivo de criar um frontend 
 * Azure Functions
 * Azure Static Web Apps
 * GitHub
-* Apidog para mock de dados
+* MongoDB Atlas
 
 ## Funcionalidades
 
@@ -19,7 +19,7 @@ O projeto possui duas telas principais:
 * **Tela inicial:** apresenta os pets disponíveis para adoção.
 * **Tela de cadastro:** permite o preenchimento de informações para cadastro de um novo pet.
 
-O frontend realiza comunicação com uma Azure Function através de requisições HTTP, utilizando dados mockados.
+O frontend realiza comunicação com a API da própria Static Web App através de requisições HTTP. Os registros são lidos e gravados no MongoDB Atlas.
 
 ## Comunicação com a API
 
@@ -27,11 +27,13 @@ O projeto utiliza um endpoint `GET` de Azure Functions para buscar os dados dos 
 
 ### Endpoint
 
-`GET https://miaudota-api-midup-c2dqhcemane5h4eg.brazilsouth-01.azurewebsites.net/api/pets`
+`GET https://proud-wave-00198ca10.5.azurestaticapps.net/api/pets`
 
 Os dados retornados pelo endpoint são utilizados pelo frontend para exibir os pets disponíveis.
 
 ## Publicação
+
+Antes do deploy, configure `MONGODB_URI` nas Application settings da Static Web App. O arquivo `local.settings.json` serve apenas para execução local e não é publicado.
 
 ### GitHub
 

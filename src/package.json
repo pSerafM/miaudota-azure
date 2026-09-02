@@ -1,0 +1,10 @@
+{
+  "name": "miaudota-api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "functions/*.js",
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "mongodb": "^7.6.0"
+  }
+}

@@ -1,32 +1,38 @@
-// URL local para testes. Ao publicar, troque para a URL da nuvem.
-const API_URL = 'https://miaudota-api-midup-c2dqhcemane5h4eg.brazilsouth-01.azurewebsites.net/api/pets';
+const API_URL = '/api/pets';
+
+async function requisicaoApi(url, options) {
+    const response = await fetch(url, options);
+    const body = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+        throw new Error(body.error || body.message || `API retornou ${response.status}`);
+    }
+
+    return body;
+}
 
 async function listarPets() {
-    const response = await fetch(API_URL);
-    return await response.json();
+    return await requisicaoApi(API_URL);
 }
 
 async function cadastrarPet(pet) {
-    const response = await fetch(API_URL, {
+    return await requisicaoApi(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(pet)
     });
-    return await response.json();
 }
 
 async function atualizarPet(id, dados) {
-    const response = await fetch(`${API_URL}/${id}`, {
+    return await requisicaoApi(`${API_URL}/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dados)
     });
-    return await response.json();
 }
 
 async function deletarPet(id) {
-    const response = await fetch(`${API_URL}/${id}`, {
+    return await requisicaoApi(`${API_URL}/${id}`, {
         method: 'DELETE'
     });
-    return await response.json();
 }
