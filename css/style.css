@@ -44,6 +44,13 @@ main {
     -webkit-backdrop-filter: blur(6.4px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-pet:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+    border-color: rgba(255, 255, 255, 0.55);
 }
 
 .card-pet h3 {
@@ -66,6 +73,11 @@ main {
     border-radius: 16px;
     backdrop-filter: blur(8.8px);
     text-decoration: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.botao:hover {
+    transform: translateY(-2px) scale(1.02);
 
 }
 .excluir {
@@ -76,7 +88,6 @@ main {
     border: 1px solid rgba(160, 86, 26, 0.274);
     width: 100px;
     height: 50px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .excluir:hover {
     background: linear-gradient(45deg,rgba(179, 17, 17, 0.87) 0%, rgba(219, 43, 140, 0.507) 100%);
@@ -91,7 +102,6 @@ main {
     border: 1px solid rgba(81, 105, 86, 0.651);
     width: 100px;
     height: 50px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .editar:hover {
     background: linear-gradient(45deg,rgba(0, 255, 34, 0.50) 0%, rgba(128, 255, 44, 0.6) 100%);
@@ -104,7 +114,6 @@ main {
     backdrop-filter: blur(8.8px);
     -webkit-backdrop-filter: blur(8.8px);
     border: 1px solid rgba(6, 54, 15, 0.432);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .normal:hover {
     background: linear-gradient(45deg,rgba(0, 255, 34, 0.50) 0%, rgba(128, 255, 44, 0.6) 100%);
