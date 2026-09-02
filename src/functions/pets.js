@@ -1,13 +1,18 @@
 const { app } = require('@azure/functions');
 const { MongoClient, ObjectId } = require('mongodb');
 
-// Substitua pela sua String de Conexão do MongoDB Atlas
-const uri = process.env.MONGODB_URI || "mongodb+srv://admin_miaudota:Senha1234@animais.pkdfzkw.mongodb.net/?appName=animais";
+const uri = process.env.MONGODB_URI;
+
+if (!uri) {
+    throw new Error("MONGODB_URI não foi configurada.");
+}
+
 const client = new MongoClient(uri);
+const clientPromise = client.connect();
 
 async function getCollection() {
-    // Mantém a conexão aberta para melhor performance
-    if (!client.topology || !client.topology.isConnected()) await client.connect();
+    await clientPromise;
+
     const db = client.db('miaudota');
     return db.collection('pets');
 }
