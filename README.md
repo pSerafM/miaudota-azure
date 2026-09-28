@@ -2,6 +2,10 @@
 
 Projeto desenvolvido para a atividade PJBL, com o objetivo de criar um frontend web integrado a uma Azure Function e ao MongoDB Atlas.
 
+## Membros:
+
+Fernanda Giacobbo, Julia Melo, Lara Bredow, Pedro Serafim & Sofhia Chromiec.
+
 ## Tecnologias utilizadas
 
 * HTML5
