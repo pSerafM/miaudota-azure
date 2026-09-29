@@ -4,7 +4,7 @@ Projeto desenvolvido para a atividade PJBL, com o objetivo de criar um frontend 
 
 ## Membros:
 
-Fernanda Giacobbo, Julia Melo, Lara Bredow, Pedro Serafim & Sofhia Chromiec.
+Fernanda Giacobbo, Julia Melo, Pedro Serafim & Sofhia Chromiec.
 
 ## Tecnologias utilizadas
 
